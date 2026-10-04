@@ -1,0 +1,966 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Andini Oktavia Dyah Putri - Personal Portfolio</title>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="andini.css">
+
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            rose: '#E8B4B8',
+                            lavender: '#DCD6F7',
+                            cream: '#FBF7F4',
+                            slate: '#2B2D42',
+                            accent: '#6C5CE7',
+                            gold: '#D4AF37'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                        serif: ['"Playfair Display"', 'serif']
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="bg-brand-cream text-slate-800 dark:bg-[#0f111a] dark:text-gray-100 font-sans transition-colors duration-300 antialiased">
+
+    <!-- Background -->
+    <div class="fixed inset-0 overflow-hidden pointer-events-none -z-10">
+        <div class="absolute -top-40 -left-40 w-96 h-96 bg-pink-200/50 dark:bg-purple-900/20 rounded-full blur-3xl animate-glow"></div>
+        <div class="absolute top-1/3 -right-40 w-96 h-96 bg-purple-200/50 dark:bg-indigo-900/20 rounded-full blur-3xl animate-glow"></div>
+        <div class="absolute -bottom-40 left-1/3 w-96 h-96 bg-rose-200/40 dark:bg-pink-900/20 rounded-full blur-3xl animate-glow"></div>
+    </div>
+
+    <!-- NAVBAR -->
+    <header class="fixed top-0 left-0 w-full z-50 glass-nav border-b border-gray-200/50 dark:border-gray-800/50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+
+                <a href="#hero" class="group flex items-center gap-2">
+                    <span class="w-10 h-10 rounded-xl bg-gradient-to-tr from-brand-rose to-brand-accent text-white font-serif font-bold text-xl flex items-center justify-center">
+                        A
+                    </span>
+
+                    <span class="font-serif font-bold text-xl tracking-tight">
+                        Andini<span class="text-rose-400 font-sans font-light">.Dyah</span>
+                    </span>
+                </a>
+
+
+                <!-- Desktop Menu -->
+                <nav class="hidden md:flex items-center gap-8 font-medium text-sm">
+                    <a href="#tentang">Tentang Saya</a>
+                    <a href="#keahlian">Keahlian</a>
+                    <a href="#portofolio">Portofolio</a>
+                    <a href="#pendidikan">Pendidikan</a>
+                    <a href="#kontak">Kontak</a>
+                </nav>
+
+                <!-- Desktop Button -->
+                <div class="hidden md:flex items-center gap-4">
+                    <button id="themeToggle" class="p-2.5 rounded-xl bg-white/80 dark:bg-gray-800 border">
+                        <i class="fa-solid fa-sun hidden dark:block"></i>
+                        <i class="fa-solid fa-moon block dark:hidden"></i>
+                    </button>
+
+                    <a href="#kontak" class="px-5 py-2.5 text-sm font-semibold text-white bg-slate-800 dark:bg-brand-accent rounded-xl">
+                        Hubungi Saya
+                    </a>
+                </div>
+
+                <!-- Mobile -->
+                <div class="flex items-center gap-2 md:hidden">
+                    <button id="themeToggleMobile" class="p-2 rounded-lg border">
+                        <i class="fa-solid fa-sun hidden dark:block"></i>
+                        <i class="fa-solid fa-moon block dark:hidden"></i>
+                    </button>
+
+                    <button id="mobileMenuBtn" class="p-2 rounded-lg">
+                        <i class="fa-solid fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobileMenu" class="hidden md:hidden border-b px-4 pt-2 pb-6 space-y-3">
+            <a href="#tentang" class="mobile-link block px-3 py-2 rounded-lg">Tentang Saya</a>
+            <a href="#keahlian" class="mobile-link block px-3 py-2 rounded-lg">Keahlian</a>
+            <a href="#portofolio" class="mobile-link block px-3 py-2 rounded-lg">Portofolio</a>
+            <a href="#pendidikan" class="mobile-link block px-3 py-2 rounded-lg">Pendidikan</a>
+            <a href="#kontak" class="mobile-link block px-3 py-2 rounded-lg">Kontak</a>
+        </div>
+    </header>
+
+
+    <!-- HERO -->
+    <section id="hero" class="pt-32 pb-20 md:pt-40 md:pb-28 min-h-screen flex items-center">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+            <div class="grid md:grid-cols-12 gap-12 items-center">
+
+                <div class="md:col-span-7 space-y-6 text-center md:text-left">
+
+                    <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-rose-100/80 text-rose-700 text-xs sm:text-sm font-semibold">
+                        <span class="w-2 h-2 rounded-full bg-emerald-500 animate-ping"></span>
+                        Student Developer Engineering
+                    </div>
+
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-serif font-bold leading-tight">
+                        HELLO , I'M <br>
+                        <span class="text-transparent bg-clip-text bg-gradient-to-r from-rose-500 via-purple-600 to-indigo-600">
+                            Andini Oktavia
+                        </span>
+                        Dyah Putri
+                    </h1>
+
+                    <p class="text-gray-600 dark:text-gray-300 text-base sm:text-lg max-w-xl mx-auto md:mx-0 leading-relaxed">
+                        Menggabungkan kreativitas desain, ketajaman strategi digital,
+                        dan pengembangan teknologi modern untuk menciptakan solusi
+                        visual dan digital yang berkesan.
+                    </p>
+
+                    <div class="flex flex-col sm:flex-row gap-4 pt-2">
+                        <a href="#portofolio" class="px-7 py-3.5 rounded-xl font-semibold text-white bg-gradient-to-r from-rose-500 to-indigo-600 text-center">
+                            Lihat Portofolio
+                            <i class="fa-solid fa-arrow-right ml-2"></i>
+                        </a>
+
+                        <a href="#kontak" class="px-7 py-3.5 rounded-xl font-semibold bg-white dark:bg-gray-800 border text-center">
+                            Diskusi Proyek
+                        </a>
+                    </div>
+
+                    <div class="pt-6 flex items-center justify-center md:justify-start gap-4">
+                        <span class="text-xs font-semibold uppercase tracking-wider">
+                            Ikuti Saya:
+                        </span>
+
+                        <a href="https://linkedin.com" target="_blank">
+                            <i class="fa-brands fa-linkedin-in text-lg"></i>
+                        </a>
+
+                        <a href="https://instagram.com" target="_blank">
+                            <i class="fa-brands fa-instagram text-lg"></i>
+                        </a>
+
+                        <a href=" https://github.com/andinikanesa-design" target="_blank">
+                            <i class="fa-brands fa-github text-lg"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- FOTO -->
+                <div class="md:col-span-5 flex justify-center">
+                    <div class="relative w-80 h-80 sm:w-96 sm:h-96 lg:w-[430px] lg:h-[430px]">
+
+                        <div class="absolute inset-0 rounded-3xl bg-gradient-to-tr from-rose-300 via-purple-300 to-indigo-300 rotate-6 blur-lg opacity-70"></div>
+
+                        <div class="relative w-full h-full rounded-3xl glass-card overflow-hidden p-3 shadow-2xl">
+
+                            <div class="w-full h-full rounded-2xl bg-gradient-to-b from-rose-100 to-purple-100 dark:from-gray-800 dark:to-gray-900 flex flex-col items-center justify-center p-6">
+
+                                <img
+                                    src="image.png"
+                                    alt="Andini Oktavia Dyah Putri"
+                                    class="w-52 h-52 sm:w-60 sm:h-60 lg:w-64 lg:h-64 rounded-full object-cover border-4 border-white shadow-md mb-4"
+                                >
+
+                                <h3 class="font-serif font-bold text-lg">
+                                    Andini Oktavia D. P.
+                                </h3>
+
+                                <p class="text-xs text-rose-500">
+                                    Student Developer Engineering
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ABOUT -->
+    <section id="tentang" class="py-20">
+        <div class="max-w-7xl mx-auto px-4">
+
+            <div class="text-center mb-16">
+                <h2 class="text-xs font-bold uppercase tracking-widest text-rose-500">
+                    Mengenal Lebih Dekat
+                </h2>
+
+                <p class="text-3xl sm:text-4xl font-serif font-bold">
+                    Tentang Saya
+                </p>
+
+                <div class="w-16 h-1 bg-gradient-to-r from-rose-400 to-purple-500 mx-auto mt-4 rounded-full"></div>
+            </div>
+
+            <div class="grid md:grid-cols-12 gap-8 items-center">
+
+                <div class="md:col-span-7 space-y-5">
+                    <h3 class="text-2xl font-serif font-semibold">
+                        Dedikasi pada Estetika, Fungsi, dan Efisiensi Digital
+                    </h3>
+
+                    <p class="leading-relaxed text-gray-600 dark:text-gray-300">
+                         Halo! Saya Andini Oktavia Dyah Putri.
+                    Saya merupakan seorang pelajar yang memiliki
+                    ketertarikan terhadap teknologi dan dunia
+                    pengembangan perangkat lunak.
+                    </p>
+
+                    <p class="leading-relaxed text-gray-600 dark:text-gray-300">
+                        Saat ini saya sedang mempelajari HTML, CSS,
+                    JavaScript, serta dasar-dasar pemrograman dan
+                    pengembangan website. Saya senang mencoba
+                    membuat berbagai project untuk meningkatkan
+                    kemampuan saya.
+                    </p>
+
+                    <div class="grid grid-cols-2 gap-4 pt-4">
+
+                        <div class="p-4 rounded-xl bg-white/60 dark:bg-gray-800/50 border">
+                            <i class="fa-solid fa-lightbulb text-rose-500 text-xl mb-2"></i>
+                            <h4 class="font-bold text-sm">Kreativitas Inovatif</h4>
+                            <p class="text-xs text-gray-500">
+                                Menghadirkan ide segar dalam setiap karya.
+                            </p>
+                        </div>
+
+                        <div class="p-4 rounded-xl bg-white/60 dark:bg-gray-800/50 border">
+                            <i class="fa-solid fa-bullseye text-purple-500 text-xl mb-2"></i>
+                            <h4 class="font-bold text-sm">Berbasis Detail</h4>
+                            <p class="text-xs text-gray-500">
+                                Teliti mulai dari konsep hingga hasil akhir.
+                            </p>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="md:col-span-5 grid grid-cols-2 gap-4">
+
+                   
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- SKILLS -->
+    <section id="keahlian" class="py-20 bg-white/40 dark:bg-gray-900/40 border-y">
+        <div class="max-w-7xl mx-auto px-4">
+
+            <div class="text-center mb-16">
+                <h2 class="text-xs font-bold uppercase tracking-widest text-rose-500">
+                    Kemampuan Utama
+                </h2>
+
+                <p class="text-3xl sm:text-4xl font-serif font-bold">
+                    Keahlian & Spesialisasi
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                <!-- Web -->
+                <div class="glass-card p-6 rounded-2xl">
+                    <div class="w-12 h-12 rounded-xl bg-rose-100 text-rose-500 flex items-center justify-center text-xl mb-6">
+                        <i class="fa-solid fa-code"></i>
+                    </div>
+
+                    <h3 class="text-xl font-serif font-bold mb-4">
+                        Pengembangan Web
+                    </h3>
+
+                    <div class="space-y-4">
+
+                        <div>
+                            <div class="flex justify-between text-xs font-semibold">
+                                <span>HTML5 / CSS3 / Tailwind</span>
+                                <span>90%</span>
+                            </div>
+
+                            <div class="w-full h-2 bg-gray-200 rounded-full">
+                                <div class="h-full bg-rose-500 rounded-full" style="width:90%"></div>
+                            </div>
+                        </div>
+
+                        <div>
+                            <div class="flex justify-between text-xs font-semibold">
+                                <span>JavaScript</span>
+                                <span>80%</span>
+                            </div>
+
+                            <div class="w-full h-2 bg-gray-200 rounded-full">
+                                <div class="h-full bg-rose-500 rounded-full" style="width:80%"></div>
+                            </div>
+                        </div>
+
+                        <div>
+                            <div class="flex justify-between text-xs font-semibold">
+                                <span>UI/UX Design</span>
+                                <span>85%</span>
+                            </div>
+
+                            <div class="w-full h-2 bg-gray-200 rounded-full">
+                                <div class="h-full bg-rose-500 rounded-full" style="width:85%"></div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+
+                <!-- Design -->
+                <div class="glass-card p-6 rounded-2xl">
+
+                    <div class="w-12 h-12 rounded-xl bg-purple-100 text-purple-500 flex items-center justify-center text-xl mb-6">
+                        <i class="fa-solid fa-palette"></i>
+                    </div>
+
+                    <h3 class="text-xl font-serif font-bold mb-4">
+                        Desain & Branding
+                    </h3>
+
+                    <div class="space-y-4">
+
+                        <div>
+                            <div class="flex justify-between text-xs font-semibold">
+                                <span>Photoshop & Illustrator</span>
+                                <span>88%</span>
+                            </div>
+
+                            <div class="w-full h-2 bg-gray-200 rounded-full">
+                                <div class="h-full bg-purple-500 rounded-full" style="width:88%"></div>
+                            </div>
+                        </div>
+
+                        <div>
+                            <div class="flex justify-between text-xs font-semibold">
+                                <span>Canva / Branding</span>
+                                <span>95%</span>
+                            </div>
+
+                            <div class="w-full h-2 bg-gray-200 rounded-full">
+                                <div class="h-full bg-purple-500 rounded-full" style="width:95%"></div>
+                            </div>
+                        </div>
+
+                        <div>
+                            <div class="flex justify-between text-xs font-semibold">
+                                <span>Social Media Graphics</span>
+                                <span>92%</span>
+                            </div>
+
+                            <div class="w-full h-2 bg-gray-200 rounded-full">
+                                <div class="h-full bg-purple-500 rounded-full" style="width:92%"></div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+
+                <!-- Soft Skills -->
+                <div class="glass-card p-6 rounded-2xl">
+
+                    <div class="w-12 h-12 rounded-xl bg-indigo-100 text-indigo-500 flex items-center justify-center text-xl mb-6">
+                        <i class="fa-solid fa-list-check"></i>
+                    </div>
+
+                    <h3 class="text-xl font-serif font-bold mb-4">
+                        Manajemen & Soft Skills
+                    </h3>
+
+                    <div class="space-y-4">
+
+                        <div>
+                            <div class="flex justify-between text-xs font-semibold">
+                                <span>Project Management</span>
+                                <span>87%</span>
+                            </div>
+
+                            <div class="w-full h-2 bg-gray-200 rounded-full">
+                                <div class="h-full bg-indigo-500 rounded-full" style="width:87%"></div>
+                            </div>
+                        </div>
+
+                        <div>
+                            <div class="flex justify-between text-xs font-semibold">
+                                <span>Komunikasi</span>
+                                <span>90%</span>
+                            </div>
+
+                            <div class="w-full h-2 bg-gray-200 rounded-full">
+                                <div class="h-full bg-indigo-500 rounded-full" style="width:90%"></div>
+                            </div>
+                        </div>
+
+                        <div>
+                            <div class="flex justify-between text-xs font-semibold">
+                                <span>Riset & Content Strategy</span>
+                                <span>85%</span>
+                            </div>
+
+                            <div class="w-full h-2 bg-gray-200 rounded-full">
+                                <div class="h-full bg-indigo-500 rounded-full" style="width:85%"></div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- PORTFOLIO -->
+    <section id="portofolio" class="py-20">
+        <div class="max-w-7xl mx-auto px-4">
+
+            <div class="text-center mb-12">
+                <h2 class="text-xs font-bold uppercase tracking-widest text-rose-500">
+                    Galeri Karya
+                </h2>
+
+                <p class="text-3xl sm:text-4xl font-serif font-bold">
+                    Portofolio Terpilih
+                </p>
+            </div>
+
+            <!-- Filter -->
+            <div class="flex flex-wrap justify-center gap-2 mb-12">
+
+                <button class="filter-btn active px-5 py-2 rounded-xl text-sm font-semibold bg-slate-800 text-white" data-filter="all">
+                    Semua Karya
+                </button>
+
+                <button class="filter-btn px-5 py-2 rounded-xl text-sm font-semibold bg-white dark:bg-gray-800 border" data-filter="web">
+                    Web & UI
+                </button>
+
+                <button class="filter-btn px-5 py-2 rounded-xl text-sm font-semibold bg-white dark:bg-gray-800 border" data-filter="design">
+                    Desain & Branding
+                </button>
+
+                <button class="filter-btn px-5 py-2 rounded-xl text-sm font-semibold bg-white dark:bg-gray-800 border" data-filter="strategy">
+                    Strategi & Konten
+                </button>
+
+            </div>
+
+
+            <!-- Projects -->
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8" id="projectsContainer">
+
+                <!-- Project 1 -->
+                <div class="project-card glass-card rounded-2xl overflow-hidden shadow-sm group" data-category="web">
+
+                    <div class="relative overflow-hidden h-52">
+                        <img src="https://placehold.co/600x400/e8b4b8/ffffff?text=E-Commerce+Redesign"
+                             alt="E-Commerce Redesign"
+                             class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+
+                        <div class="absolute inset-0 bg-slate-900/60 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                            <button onclick="openModal(
+                                'E-Commerce Fashion Website',
+                                'Desain website e-commerce modern dengan fokus pada kemudahan navigasi dan katalog produk.',
+                                'Web & UI',
+                                ['HTML','Tailwind CSS','Figma']
+                            )"
+                            class="p-3 bg-white text-slate-900 rounded-full">
+                                <i class="fa-solid fa-eye"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="p-6">
+                        <span class="text-xs font-bold text-rose-500 uppercase">
+                            Web & UI Design
+                        </span>
+
+                        <h3 class="font-serif font-bold text-lg mt-1 mb-2">
+                            E-Commerce Fashion Website
+                        </h3>
+
+                        <p class="text-xs text-gray-600 dark:text-gray-400">
+                            Redesain antarmuka toko online dengan tampilan modern.
+                        </p>
+                    </div>
+                </div>
+
+
+                <!-- Project 2 -->
+                <div class="project-card glass-card rounded-2xl overflow-hidden shadow-sm group" data-category="design">
+
+                    <div class="relative overflow-hidden h-52">
+                        <img src="https://placehold.co/600x400/dcd6f7/2b2d42?text=Brand+Identity"
+                             alt="Brand Identity"
+                             class="w-full h-full object-cover">
+
+                        <div class="absolute inset-0 bg-slate-900/60 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                            <button onclick="openModal(
+                                'Identitas Visual Coffee Shop',
+                                'Perancangan logo, packaging, dan panduan warna brand kopi.',
+                                'Desain & Branding',
+                                ['Illustrator','Photoshop','Branding']
+                            )"
+                            class="p-3 bg-white text-slate-900 rounded-full">
+                                <i class="fa-solid fa-eye"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="p-6">
+                        <span class="text-xs font-bold text-purple-500 uppercase">
+                            Desain Grafis
+                        </span>
+
+                        <h3 class="font-serif font-bold text-lg mt-1 mb-2">
+                            Identitas Visual Kopi Artisan
+                        </h3>
+
+                        <p class="text-xs text-gray-600 dark:text-gray-400">
+                            Konsep branding menyeluruh dari logo hingga kemasan.
+                        </p>
+                    </div>
+                </div>
+
+
+                <!-- Project 3 -->
+                <div class="project-card glass-card rounded-2xl overflow-hidden shadow-sm group" data-category="strategy">
+
+                    <div class="relative overflow-hidden h-52">
+                        <img src="https://placehold.co/600x400/fbf7f4/2b2d42?text=Social+Media+Campaign"
+                             alt="Social Media Campaign"
+                             class="w-full h-full object-cover">
+
+                        <div class="absolute inset-0 bg-slate-900/60 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                            <button onclick="openModal(
+                                'Kampanye Media Sosial Edukatif',
+                                'Penyusunan kalender konten dan strategi visual.',
+                                'Strategi & Konten',
+                                ['Copywriting','Content Strategy','Canva']
+                            )"
+                            class="p-3 bg-white text-slate-900 rounded-full">
+                                <i class="fa-solid fa-eye"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="p-6">
+                        <span class="text-xs font-bold text-indigo-500 uppercase">
+                            Strategi & Konten
+                        </span>
+
+                        <h3 class="font-serif font-bold text-lg mt-1 mb-2">
+                            Kampanye Instagram Edukatif
+                        </h3>
+
+                        <p class="text-xs text-gray-600 dark:text-gray-400">
+                            Strategi desain visual konten media sosial.
+                        </p>
+                    </div>
+                </div>
+
+
+                <!-- Project 4 -->
+                <div class="project-card glass-card rounded-2xl overflow-hidden shadow-sm group" data-category="web">
+
+                    <div class="relative overflow-hidden h-52">
+                        <img src="https://placehold.co/600x400/6c5ce7/ffffff?text=Admin+Dashboard"
+                             alt="Admin Dashboard"
+                             class="w-full h-full object-cover">
+
+                        <div class="absolute inset-0 bg-slate-900/60 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                            <button onclick="openModal(
+                                'Dashboard Manajemen Tugas',
+                                'Desain dashboard analitik dengan visualisasi data yang bersih dan responsif.',
+                                'Web & UI',
+                                ['Vue.js','Tailwind','Charts']
+                            )"
+                            class="p-3 bg-white text-slate-900 rounded-full">
+                                <i class="fa-solid fa-eye"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="p-6">
+                        <span class="text-xs font-bold text-rose-500 uppercase">
+                            Web Application
+                        </span>
+
+                        <h3 class="font-serif font-bold text-lg mt-1 mb-2">
+                            Dashboard Analytics UI
+                        </h3>
+
+                        <p class="text-xs text-gray-600 dark:text-gray-400">
+                            Sistem manajemen internal dengan grafik interaktif.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- EDUCATION -->
+    <section id="pendidikan" class="py-20 bg-white/40 dark:bg-gray-900/40 border-y">
+        <div class="max-w-7xl mx-auto px-4">
+
+            <div class="text-center mb-16">
+                <h2 class="text-xs font-bold uppercase tracking-widest text-rose-500">
+                    Jejak Langkah
+                </h2>
+
+                <p class="text-3xl sm:text-4xl font-serif font-bold">
+                    Pendidikan & Sertifikasi
+                </p>
+            </div>
+
+            <div class="max-w-4xl mx-auto">
+
+                <div class="relative border-l-2 border-rose-300 ml-4 md:ml-32 space-y-12">
+
+                    <div class="relative pl-8">
+                        <div class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-rose-500 border-4 border-white"></div>
+
+                        <div class="glass-card p-6 rounded-2xl">
+                            <span class="text-xs font-bold text-rose-500">
+                                2021 - Sekarang
+                            </span>
+
+                            <h3 class="text-lg font-serif font-bold mt-2">
+                                S1 / Pendidikan Tinggi
+                            </h3>
+
+                            <p class="text-xs text-gray-600 dark:text-gray-400 mt-2">
+                                Aktif dalam berbagai kegiatan akademik dan organisasi,
+                                dengan fokus pada pengembangan teknologi.
+                            </p>
+                        </div>
+                    </div>
+
+
+                    <div class="relative pl-8">
+                        <div class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-purple-500 border-4 border-white"></div>
+
+                        <div class="glass-card p-6 rounded-2xl">
+                            <span class="text-xs font-bold text-purple-500">
+                                2023
+                            </span>
+
+                            <h3 class="text-lg font-serif font-bold mt-2">
+                                Sertifikasi UI/UX Design & Frontend
+                            </h3>
+
+                            <p class="text-xs text-gray-600 dark:text-gray-400 mt-2">
+                                Mempelajari wireframe, user research, design system,
+                                dan website responsif.
+                            </p>
+                        </div>
+                    </div>
+
+
+                    <div class="relative pl-8">
+                        <div class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-indigo-500 border-4 border-white"></div>
+
+                        <div class="glass-card p-6 rounded-2xl">
+                            <span class="text-xs font-bold text-indigo-500">
+                                2022
+                            </span>
+
+                            <h3 class="text-lg font-serif font-bold mt-2">
+                                Pelatihan Digital Marketing & Branding
+                            </h3>
+
+                            <p class="text-xs text-gray-600 dark:text-gray-400 mt-2">
+                                Mempelajari strategi pemasaran media sosial,
+                                analisis audiens, dan pembuatan konten.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- CONTACT -->
+    <section id="kontak" class="py-20">
+        <div class="max-w-7xl mx-auto px-4">
+
+            <div class="text-center mb-16">
+                <h2 class="text-xs font-bold uppercase tracking-widest text-rose-500">
+                    Mari Terhubung
+                </h2>
+
+                <p class="text-3xl sm:text-4xl font-serif font-bold">
+                    Hubungi Saya
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-12 gap-8">
+
+                <div class="md:col-span-5">
+
+                    <div class="glass-card p-6 rounded-2xl space-y-6">
+
+                        <h3 class="text-xl font-serif font-bold">
+                            Informasi Kontak
+                        </h3>
+
+                        <p class="text-xs text-gray-600 dark:text-gray-400">
+                            Punya ide proyek atau ingin bekerja sama?
+                            Jangan ragu untuk menghubungi saya.
+                        </p>
+
+                        <div class="space-y-4">
+
+                            <div class="flex items-center gap-4">
+                                <div class="w-10 h-10 rounded-xl bg-rose-100 text-rose-500 flex items-center justify-center">
+                                    <i class="fa-solid fa-envelope"></i>
+                                </div>
+
+                                <div>
+                                    <span class="block text-[10px] text-gray-400 uppercase">
+                                        Email
+                                    </span>
+
+                                    <a href="andinikanesa@gmail.com"
+                                       class="text-sm font-semibold">
+                                        andinikanesa@gmail.com
+                                    </a>
+                                </div>
+                            </div>
+
+
+                            <div class="flex items-center gap-4">
+                                <div class="w-10 h-10 rounded-xl bg-purple-100 text-purple-500 flex items-center justify-center">
+                                    <i class="fa-solid fa-phone"></i>
+                                </div>
+
+                                <div>
+                                    <span class="block text-[10px] text-gray-400 uppercase">
+                                        github
+                                    </span>
+
+                                    <a href="https://github.com/andinikanesa-design"
+                                       target="_blank"
+                                       class="text-sm font-semibold">
+                                        andinikanesa-design
+                                    </a>
+                                </div>
+                            </div>
+
+
+                            <div class="flex items-center gap-4">
+                                <div class="w-10 h-10 rounded-xl bg-indigo-100 text-indigo-500 flex items-center justify-center">
+                                    <i class="fa-solid fa-location-dot"></i>
+                                </div>
+
+                                <div>
+                                    <span class="block text-[10px] text-gray-400 uppercase">
+                                        Lokasi
+                                    </span>
+
+                                    <span class="text-sm font-semibold">
+                                        kepanjen,malang,jatim
+                                    </span>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+
+
+                <!-- Form -->
+                <div class="md:col-span-7">
+
+                    <form id="contactForm" class="glass-card p-6 sm:p-8 rounded-2xl space-y-4">
+
+                        <div class="grid sm:grid-cols-2 gap-4">
+
+                            <div>
+                                <label class="block text-xs font-semibold mb-1">
+                                    Nama Lengkap
+                                </label>
+
+                                <input type="text"
+                                       id="nama"
+                                       required
+                                       placeholder="Masukkan nama Anda"
+                                       class="w-full px-4 py-3 rounded-xl border">
+                            </div>
+
+                            <div>
+                                <label class="block text-xs font-semibold mb-1">
+                                    Email Anda
+                                </label>
+
+                                <input type="email"
+                                       id="email"
+                                       required
+                                       placeholder="nama@email.com"
+                                       class="w-full px-4 py-3 rounded-xl border">
+                            </div>
+
+                        </div>
+
+
+                        <div>
+                            <label class="block text-xs font-semibold mb-1">
+                                Subjek Pesan
+                            </label>
+
+                            <input type="text"
+                                   id="subjek"
+                                   required
+                                   placeholder="Contoh: Penawaran Proyek"
+                                   class="w-full px-4 py-3 rounded-xl border">
+                        </div>
+
+
+                        <div>
+                            <label class="block text-xs font-semibold mb-1">
+                                Pesan
+                            </label>
+
+                            <textarea id="pesan"
+                                      rows="4"
+                                      required
+                                      placeholder="Tuliskan pesan Anda..."
+                                      class="w-full px-4 py-3 rounded-xl border resize-none"></textarea>
+                        </div>
+
+
+                        <button type="submit"
+                                class="w-full py-3.5 rounded-xl bg-gradient-to-r from-rose-500 to-indigo-600 text-white font-semibold">
+                            Kirim Pesan
+                            <i class="fa-solid fa-paper-plane ml-2"></i>
+                        </button>
+
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- FOOTER -->
+    <footer class="py-8 bg-slate-900 text-white text-xs">
+
+        <div class="max-w-7xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-4">
+
+            <p class="text-gray-400">
+                &copy; <span id="currentYear"></span>
+                Andini Oktavia Dyah Putri.
+                Hak Cipta Dilindungi.
+            </p>
+
+            <div class="flex items-center gap-6 text-gray-400">
+                <a href="#hero">Beranda</a>
+                <a href="#tentang">Tentang</a>
+                <a href="#portofolio">Portofolio</a>
+            </div>
+
+            <a href="#hero"
+               class="w-8 h-8 rounded-lg bg-gray-800 flex items-center justify-center">
+                <i class="fa-solid fa-arrow-up"></i>
+            </a>
+
+        </div>
+    </footer>
+
+
+    <!-- MODAL -->
+    <div id="projectModal"
+         class="fixed inset-0 z-50 hidden flex items-center justify-center p-4 bg-slate-900/70 backdrop-blur-sm">
+
+        <div class="glass-card bg-white dark:bg-gray-900 rounded-2xl max-w-lg w-full p-6 relative">
+
+            <button onclick="closeModal()"
+                    class="absolute top-4 right-4 text-gray-400 text-lg">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+
+            <span id="modalCategory"
+                  class="text-[10px] font-bold text-rose-500 uppercase">
+            </span>
+
+            <h3 id="modalTitle"
+                class="text-xl font-serif font-bold mt-2 mb-3">
+            </h3>
+
+            <p id="modalDesc"
+               class="text-xs text-gray-600 dark:text-gray-300 leading-relaxed mb-4">
+            </p>
+
+            <div id="modalTags"
+                 class="flex flex-wrap gap-1.5 mb-6">
+            </div>
+
+            <button onclick="closeModal()"
+                    class="w-full py-2.5 rounded-xl bg-slate-800 dark:bg-brand-accent text-white text-xs font-semibold">
+                Tutup Detail
+            </button>
+
+        </div>
+    </div>
+
+
+    <!-- TOAST -->
+    <div id="toast"
+         class="fixed bottom-5 right-5 z-50 translate-y-20 opacity-0 transition-all duration-300 pointer-events-none">
+
+        <div class="bg-emerald-600 text-white px-5 py-3 rounded-xl shadow-lg flex items-center gap-3 text-xs font-medium">
+
+            <i class="fa-solid fa-circle-check text-base"></i>
+
+            <span id="toastMsg">
+                Pesan Anda berhasil terkirim!
+            </span>
+
+        </div>
+    </div>
+
+
+    <!-- JAVASCRIPT -->
+    <script src="andini.js"></script>
+
+</body>
+</html>
