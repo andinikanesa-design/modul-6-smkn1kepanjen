@@ -14,8 +14,8 @@ html {
 
 body {
     font-family: "Segoe UI", Arial, sans-serif;
-    background: #1a0025;
-    color: #6a3f75;
+    background: #ae9cb5;
+    color: #624968;
     line-height: 1.6;
 }
 
@@ -36,10 +36,10 @@ body {
 
     z-index: 1000;
 
-    background: rgba(50, 30, 81, 0.9);
+    background: rgba(66, 44, 100, 0.9);
     backdrop-filter: blur(10px);
 
-    border-bottom: 1px solid rgba(72, 30, 68, 0.687);
+    border-bottom: 1px solid rgba(118, 60, 112, 0.687);
 }
 
 
@@ -51,7 +51,7 @@ body {
 
 
 .logo span {
-    color: #00d9ff;
+    color: #9d6da4;
 }
 
 
@@ -62,7 +62,7 @@ body {
 
 
 .navbar nav a {
-    color: #4b79a8;
+    color: #5f2a71;
     text-decoration: none;
     font-weight: 500;
 
@@ -71,7 +71,7 @@ body {
 
 
 .navbar nav a:hover {
-    color: #00d9ff;
+    color: #7c4a80;
 }
 
 
@@ -81,7 +81,7 @@ body {
     border: none;
     background: transparent;
 
-    color: white;
+    color: rgb(248, 248, 248);
     font-size: 28px;
 
     cursor: pointer;
@@ -104,7 +104,7 @@ body {
     background:
         radial-gradient(
             circle at 80% 20%,
-            rgba(0,217,255,0.15),
+            rgba(107, 55, 117, 0.15),
             transparent 30%
         );
 }
@@ -116,7 +116,7 @@ body {
 
 
 .small-title {
-    color: #00d9ff;
+    color: #5f2367;
 
     font-size: 15px;
     font-weight: 700;
@@ -136,7 +136,7 @@ body {
 
 
 .hero h1 span {
-    color: #00d9ff;
+    color: #784183;
 }
 
 
@@ -186,7 +186,7 @@ body {
 
 
 .primary {
-    background: #00d9ff;
+    background: #5f3e65;
     color: #03121c;
 }
 
@@ -195,7 +195,7 @@ body {
     transform: translateY(-3px);
 
     box-shadow:
-        0 10px 30px rgba(0,217,255,0.25);
+        0 10px 30px rgba(109, 63, 118, 0.25);
 }
 
 
@@ -207,8 +207,8 @@ body {
 
 
 .secondary:hover {
-    border-color: #00d9ff;
-    color: #00d9ff;
+    border-color: #672974;
+    color: #5d3168;
 }
 
 
@@ -271,7 +271,7 @@ body {
 
 
 .section-title > p:first-child {
-    color: #425a7b;
+    color: #5c3c78;
 
     font-size: 14px;
 
@@ -400,7 +400,7 @@ body {
 .project-card:hover {
     transform: translateY(-8px);
 
-    border-color: #00d9ff;
+    border-color: #603f7f;
 
     box-shadow:
         0 15px 40px rgba(0,0,0,0.25);
